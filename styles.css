@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(45deg, #121212, #1d1d1d);
+  color: #fff;
+  transition: background 1s ease;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 0;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 1s ease;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+#container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-right: 10px;
+}
+
+canvas {
+  position: absolute;
+  animation: rotate 5s infinite linear;
+}
+
+video {
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3),
+    0 0 20px rgba(255, 255, 255, 0.3);
+  border: 2px solid #fff;
+  transition: box-shadow 0.5s ease;
+}
+
+video:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5),
+    0 0 30px rgba(255, 255, 255, 0.5);
+}
+
+#emotions {
+  color: #fff;
+  font-size: 1.2em;
+  padding-right: 10px;
+  order: -1;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3),
+    0 0 20px rgba(255, 255, 255, 0.3);
+  transition: box-shadow 0.5s ease;
+}
+
+#emotions:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5),
+    0 0 30px rgba(255, 255, 255, 0.5);
+}
+
+#emotions ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#emotions ul li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  transition: background 0.5s ease;
+}
+
+#emotions ul li:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+#screenshotButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#screenshotButton:hover {
+  background-color: #0056b3;
+}

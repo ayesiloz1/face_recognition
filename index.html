@@ -5,67 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>My First Web Page</title>
+    <title>Real-Time Face Recognition</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
     <script defer src="face-api.min.js"></script>
     <script defer src="script.js"></script>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
-
-      body {
-        margin: 0;
-        padding: 0;
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #121212;
-        font-family: "Roboto", sans-serif;
-        color: #fff;
-      }
-      canvas {
-        position: absolute;
-        animation: rotate 5s infinite linear;
-      }
-      video {
-        border-radius: 15px;
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-        border: 2px solid #fff;
-      }
-      #container {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding-right: 150px;
-      }
-
-      #emotions {
-        color: #fff;
-        font-size: 1.2em;
-        padding-right: 30px;
-        order: -1; /* This will place the emotions div before the video */
-      }
-
-      #emotions ul {
-        list-style-type: none;
-        padding: 0;
-      }
-    </style>
   </head>
   <body>
-    <div id="container">
-      <video id="video" width="720" height="560" autoplay muted></video>
-      <div id="emotions">
-        <h2>Emotions</h2>
-        <ul>
-          <li>Happy</li>
-          <li>Sad</li>
-          <li>Surprised</li>
-          <li>Fearful</li>
-          <li>Angry</li>
-          <li>Disgusted</li>
-        </ul>
+    <header>
+      <h1>Real-Time Face Recognition</h1>
+    </header>
+    <main>
+      <div id="container">
+        <video id="video" width="720" height="560" autoplay muted></video>
+        <div id="emotions">
+          <h2>Emotions</h2>
+          <ul>
+            <li data-emotion="happy">Happy</li>
+            <li data-emotion="sad">Sad</li>
+            <li data-emotion="surprised">Surprised</li>
+            <li data-emotion="fearful">Fearful</li>
+            <li data-emotion="angry">Angry</li>
+            <li data-emotion="disgusted">Disgusted</li>
+          </ul>
+        </div>
+        <p id="recognitionResult"></p>
+        <button id="screenshotButton">Take Screenshot</button>
+        <div id="screenshots"></div>
+        <audio id="happySong" src="./songs/happy.mp3" type="audio/mpeg"></audio>
+        <audio id="sadSong" src="./songs/sad.mp3" type="audio/mpeg"></audio>
       </div>
-    </div>
+    </main>
   </body>
 </html>
